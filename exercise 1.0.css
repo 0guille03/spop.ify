@@ -1,16 +1,7 @@
+/*To set the page and a general rule*/
 * {
     box-sizing: border-box;
 }
-
-
-[class*="col-"] {
-    float: left;
-}
-
-[class*="row-"] {
-    float:none;
-}
-
 
 html {
     font-family: "Lucida Sans", sans-serif;
@@ -22,51 +13,97 @@ body, html {
     margin: 0;
 }
 
+
+/*Header classes*/
 .header {
     background-color: #9933cc;
-    border: black 1px solid;
-    text-align: center;
+    border: black 5px;
+    border-style: solid none none none;
     color: #ffffff;
-    padding: 15px;
 }
-
-.main {
-    border: black 1px solid;
-    box-sizing: border-box;
+.logo {
+    border: black 5px;
+    border-style: none solid none solid;
+    height: 100%;
+}
+.title {
+    border: black 5px;
+    border-style: none solid none none;
+    text-align: center;
+    height: 100%;
+}
+.signin {
+    border: black 5px;
+    border-style: none solid none solid;
+    text-align: center;
+    height: 100%;
+}
+.login {
+    border: black 5px;
+    border-style: none solid none none;
+    text-align: center;
     height: 100%;
 }
 
+
+/*Menu classes*/
 .menu {
     height: 100%;
-    border: black 1px solid;
-    
+    border: black 5px;
+    border-style: solid solid none solid;
+    padding: 5px;
 }
-
 .menu ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-}
-  
+} 
 .menu li {
     padding: 8px;
     margin-bottom: 7px;
     background-color: #33b5e5;
-}
-  
+} 
+/*
+.menu li {
+    padding: 8px;
+    margin-bottom: 7px;
+    background-color: #33b5e5;
+    vertical-align: bottom
+} */
+
 .menu li:hover {
     background-color: #0099cc;
 }
 
+
+/*Main page content*/
+.main {
+    border: black 5px;
+    border-style: solid solid none none;
+    box-sizing: border-box;
+    height: 100%;
+}
+
+
+/*Footer content*/
 .footer {
     background-color: #0099cc;
-    border: black 1px solid;
+    border: black 5px;
+    border-style: solid solid solid solid;
     color: #ffffff;
     text-align: center;
     font-size: 12px;
     padding: 15px;
 }
 
+
+/*To adjust with and height*/
+[class*="col-"] {
+    float: left;
+}
+[class*="row-"] {
+    float:none;
+}
 .col-1 {width: 8.33%;}
 .col-2 {width: 16.66%;}
 .col-3 {width: 25%;}
