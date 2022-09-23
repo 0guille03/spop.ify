@@ -16,40 +16,49 @@ body, html {
 
 /*Header classes*/
 .header {
+    position: sticky;
     background-color: #9933cc;
-    border: black 5px;
-    border-style: solid none none none;
+    border: black 1px;
+    border-style: solid solid none none;
     color: #ffffff;
 }
 .logo {
-    border: black 5px;
+    border: black 1px;
     border-style: none solid none solid;
     height: 100%;
+    top: 30%;
+    left: 15%;
 }
 .title {
-    border: black 5px;
+    border: black 1px;
     border-style: none solid none none;
     text-align: center;
     height: 100%;
 }
-.signin {
-    border: black 5px;
-    border-style: none solid none solid;
-    text-align: center;
+
+.container {
+    position: relative;
     height: 100%;
+    width: 100%;
+}
+
+.signin {
+    position: absolute;
+    top: 30%;
+    right: 15%;
 }
 .login {
-    border: black 5px;
-    border-style: none solid none none;
-    text-align: center;
-    height: 100%;
+    position: absolute;
+    top: 30%;
+    right: 5%;
 }
 
 
 /*Menu classes*/
 .menu {
+    position: sticky relative;
     height: 100%;
-    border: black 5px;
+    border: black 1px;
     border-style: solid solid none solid;
     padding: 5px;
 }
@@ -63,6 +72,8 @@ body, html {
     margin-bottom: 7px;
     background-color: #33b5e5;
 } 
+
+
 /*
 .menu li {
     padding: 8px;
@@ -78,7 +89,7 @@ body, html {
 
 /*Main page content*/
 .main {
-    border: black 5px;
+    border: black 1px;
     border-style: solid solid none none;
     box-sizing: border-box;
     height: 100%;
@@ -87,8 +98,9 @@ body, html {
 
 /*Footer content*/
 .footer {
+    position: sticky;
     background-color: #0099cc;
-    border: black 5px;
+    border: black 1px;
     border-style: solid solid solid solid;
     color: #ffffff;
     text-align: center;
