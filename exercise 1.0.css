@@ -5,6 +5,7 @@
 
 html {
     font-family: "Lucida Sans", sans-serif;
+    width: 100% !important;
 }
 
 body, html {
@@ -20,12 +21,19 @@ body, html {
     width: 100%;
     justify-content: center;
     align-items: center;
+    text-align: center;
   }
 
 /*Header classes*/
 .header {
-    display: flexbox;
     position: sticky;
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     background-color: #9933cc;
     border: black 1px;
     border-style: solid solid none none;
@@ -34,34 +42,18 @@ body, html {
 .logo {
     border: black 1px;
     border-style: none solid none solid;
-    height: 100%;
-    top: 30%;
-    left: 15%;
 }
 .title {
     border: black 1px;
     border-style: none solid none none;
-    text-align: center;
-    height: 100%;
 }
-
-.signin {
-    align-self: flex-end;
-}
-
-.login {
-    align-self: flex-end;
-}
-
 
 /*Menu classes*/
 .menu {
     display: flexbox;
-    position: sticky relative;
-    height: 100%;
+    position: fixed;
     border: black 1px;
     border-style: solid solid none solid;
-    padding: 5px;
 }
 .menu ul {
     list-style-type: none;
@@ -73,6 +65,13 @@ body, html {
     margin-bottom: 7px;
     background-color: #33b5e5;
 } 
+
+.row:after {
+    content: "";
+    clear: both;
+    display: table;
+
+}
 
 
 /*
@@ -91,8 +90,8 @@ body, html {
 /*Main page content*/
 .main {
     border: black 1px;
-    border-style: solid solid none none;
-    box-sizing: border-box;
+    border-style: solid;
+    float: left;
     height: 100%;
 }
 
@@ -114,9 +113,7 @@ body, html {
 [class*="col-"] {
     float: left;
 }
-[class*="row-"] {
-    float:none;
-}
+
 .col-1 {width: 8.33%;}
 .col-2 {width: 16.66%;}
 .col-3 {width: 25%;}
