@@ -18,11 +18,11 @@ body, html {
 .flex-container {
     display: flex;
     flex-wrap: wrap;
-    height: 100%;
-    width: 100%;
     justify-content: center;
     align-items: center;
     text-align: center;
+    height: 100%;
+    width: 100%;
   }
 
 /*Header classes*/
@@ -53,9 +53,12 @@ body, html {
     text-align: center;
 }
 
+a {
+    color: #ffffff;
+}
+
 /*Menu classes*/
 .menu {
-    display: flexbox;
     position: fixed;
 }
 .menu ul {
@@ -83,8 +86,8 @@ body, html {
     display: grid;
     width: 100%;
     grid-template-columns: 20% 20% 20% 20% 20%;
-    justify-items: center;
     padding-bottom: 5%;
+    justify-content: left;
 }
 
 .grid-artist {
@@ -93,6 +96,7 @@ body, html {
     font-size: 30px;
     grid-column: 1 / span 5;
     padding-top: 30px;
+    padding-left: 30px;
     padding-bottom: 30px;
   }
 
@@ -131,7 +135,7 @@ body, html {
     display:inline;
 }
 
-audio:hover{
+audio:hover {
     display:inline;
 }
   
