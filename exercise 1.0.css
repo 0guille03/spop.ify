@@ -253,5 +253,9 @@ audio{
         bottom: 50px;
     }
     
+    .grid-container {
+        padding-right: 2%;
+    }
+    
 
 }
