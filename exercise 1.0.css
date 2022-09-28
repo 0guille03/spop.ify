@@ -63,6 +63,9 @@ body, html {
 a {
     color: #ffffff;
 }
+.signin, .login{
+    color: #ffffff;
+}
 
 /*Menu classes*/
 .menu {
@@ -207,18 +210,23 @@ audio{
         position:static;
         bottom: 0;
     }
-    .logo {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
+    .title{
+        width: 49%;
     }
-    
+    .logo{
+        width: 20%;
+    }
     .logo_img{
-        height: 20px;
-        width: 20px;
+        height: 50%;
+        width: 50%;
         position:static;
         left: 10px;
+    }
+    .empty_cont{
+        width: 0;
+    }
+    .signin, .login{
+        width: 15%;
     }
 
 }
