@@ -129,6 +129,8 @@ a {
 
 .cover{
     position: relative;
+    width:150px; 
+    height:150px;
 }
 
 .cover:hover{
@@ -140,9 +142,16 @@ a {
     display:inline;
 }
 
-audio:hover {
+audio:hover{
     display:inline;
 }
+
+/*
+audio:hover .cover {
+    transform: scale(1.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+*/
   
 audio{
     position:relative;
@@ -228,5 +237,21 @@ audio{
     .signin, .login{
         width: 15%;
     }
+    .cover {
+        width: 90%;
+        height: auto;
+    }
+    .grid-title {
+        padding-top: 0;
+        padding-bottom: 20px;
+    }
+    .grid-song {
+        height:auto;
+    }
+    audio{
+        width: 100px;
+        bottom: 50px;
+    }
+    
 
 }
