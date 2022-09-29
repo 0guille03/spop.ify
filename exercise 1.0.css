@@ -96,8 +96,15 @@ a {
     display: grid;
     width: 100%;
     grid-template-columns: 20% 20% 20% 20% 20%;
-    padding-bottom: 5%;
+    padding-bottom: 8%;
     justify-content: left;
+}
+.grid2{  
+    grid-template: 150px / auto;  
+    width: 100%;
+    position: relative;
+    display: grid;
+    grid-template-columns: auto;
 }
 
 .grid-artist {
@@ -105,36 +112,27 @@ a {
     text-align: left;
     font-size: 30px;
     grid-column: 1 / span 5;
-    padding-top: 30px;
+    padding-top: 20px;
     padding-left: 30px;
     padding-bottom: 30px;
   }
 
 .grid-song {
+    position:relative;
     width: 100%;
-    height: 150px;
-    position: relative;
+    height: 100%;
     justify-content: center;
-}
-
-
-.grid-title {
-    padding-top: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding-bottom: 20px;
 }
 
 .cover{
-    position: relative;
+    position:relative;
     width:150px; 
     height:150px;
 }
 
+
 .cover:hover{
-    transform: scale(1.2);
+    transform: scale(1.1);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
@@ -155,9 +153,9 @@ audio:hover .cover {
   
 audio{
     position:relative;
+    bottom:28%;
+    z-index:10;
     width: 150px;
-    bottom: 28%;
-    z-index:100;
     display:none;
 }
 
@@ -168,6 +166,7 @@ audio{
     background-color: #056676;
     color: #ffffff;
     text-align: center;
+    z-index: 20;
     font-size: 12px;
     padding: 15px;
 }
@@ -237,6 +236,7 @@ audio{
     .signin, .login{
         width: 15%;
     }
+    /*
     .cover {
         width: 90%;
         height: auto;
@@ -251,7 +251,7 @@ audio{
     audio{
         width: 100px;
         bottom: 50px;
-    }
+    }*/
     
     .grid-container {
         padding-right: 2%;
