@@ -282,6 +282,46 @@ audio{
         grid-template-columns: 50% 50%;
         padding-right: 2%;
     }
-    
+}
 
+@media only screen and (max-width: 340px) {
+    /* Display for mobile phones */
+    [class*="col-"] {
+        width: 100%;
+    }
+    [class*="row-"] {
+        height:fit-content;
+    }
+    .footer, .header, .menu{
+        position:static;
+        bottom: 0;
+    }
+    .title{
+        width: 50%;
+    }
+    .logo{
+        width: 20%;
+    }
+    .logo_img{
+        height: 50%;
+        width: 50%;
+        position:static;
+        left: 10px;
+        padding: 0;
+    }
+    .empty_cont{
+        width: 0;
+    }
+    .signin, .login{
+        width: 15%;
+    }
+
+    .grid-artist {
+        grid-column: 1 / span 1;
+    }
+    
+    .grid-container {
+        grid-template-columns: 100%;
+        padding-right: 2%;
+    }
 }
