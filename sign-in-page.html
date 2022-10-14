@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<head>
+    <title>Spop.ify</title>
+    <link rel="icon" href="img/logo.png">
+    <link rel="stylesheet" href="style/sign-in-page.css">
+</head>
+<script>
+    function validateForm() {// Get the value of the input field with id="numb"
+        let x = document.getElementById("numb").value;
+        // If x is Not a Number or less than one or greater than 10
+        let text;
+        if (isNaN(x) || x < 1 || x > 10) {
+            text = "Input not valid";
+        } else {
+            text = "Input OK";
+        }
+        document.getElementById("demo").innerHTML = text;
+    }
+</script>
+<html>
+    <div class="header">&nbsp;</div>
+    <div class="flex-container">
+        <div class="sides">&nbsp;</div>
+        <div class = "form-div">
+            <form name="signInForm" onsubmit="return validateForm()" method="post">
+                Name: <input type="text" name="fname">
+                <input id="numb">
+                <input type="submit" value="Submit">
+              </form>
+              <p id="demo"></p>
+        </div>
+        <div class="sides">&nbsp;</div>  
+      </div>
+</html>
