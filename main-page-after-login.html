@@ -16,10 +16,15 @@
                         <div class="col-2 title"><p>Spop.ify</p></div>
                         <div class="col-8 empty_cont">&nbsp;</div>
                         <div class="col-1 profile">
-                            <a onclick="this.innerHTML=Date()">
+                            <a onclick="displayMenu()">
                                 <img class="profile_pic" src="img/profile_pic/default_profile.jpg">
                             </a>
-                        </div>
+                            <div id="menu" class="dropdown-content">
+                              <a href="#">Link 1</a>
+                              <a href="#">Link 2</a>
+                              <a href="#">Link 3</a>
+                            </div>
+                          </div> 
                     </div>
 
                     <div class = "col-12 row-11 flex-container">
@@ -329,8 +334,21 @@
         </div>
     </body>
     <script>
-        function signIn() {
-          window.open("sign-in-page.html");
+        // Display drop-down menu
+        function displayMenu() {
+            document.getElementById("menu").classList.toggle("show");
         }
+
+        //Hide it if user clicks somewhere else
+        window.onclick = function(event) {
+            if (!event.target.matches('.profile')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    openDropdown.classList.remove('show');
+                    }
+            }
+            }
         </script>
 </html>
