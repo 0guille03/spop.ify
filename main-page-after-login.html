@@ -6,6 +6,9 @@
         <link rel="icon" href="img/logo.png">
         <link rel="stylesheet" href="style/main-page-after-login.css">
     </head>
+
+    <script type="text/javascript" src="script/main-page.js"></script> 
+
     <body>
         <div class="flex-container">
             <!--Header part-->
@@ -16,15 +19,15 @@
                         <div class="col-2 title"><p>Spop.ify</p></div>
                         <div class="col-8 empty_cont">&nbsp;</div>
                         <div class="col-1 profile">
-                            <a onclick="displayMenu()">
-                                <img class="profile_pic" src="img/profile_pic/default_profile.jpg">
-                            </a>
-                            <div id="menu" class="dropdown-content">
-                              <a href="#">Link 1</a>
-                              <a href="#">Link 2</a>
-                              <a href="#">Link 3</a>
+                            <button onclick="myFunction()" class="dropbtn"></button>
+                            <img class="profile_pic" src="img/profile_pic/default_profile.jpg">
+                            <div id="myDropdown" class="dropdown-content">
+                              <a href="account.html">Account</a>
+                              <a href="profile.html">Profile</a>
+                              <a href="main-page-before-login.html">Logout</a>
                             </div>
-                          </div> 
+
+                        </div> 
                     </div>
 
                     <div class = "col-12 row-11 flex-container">
@@ -333,22 +336,4 @@
                     </div>
         </div>
     </body>
-    <script>
-        // Display drop-down menu
-        function displayMenu() {
-            document.getElementById("menu").classList.toggle("show");
-        }
-
-        //Hide it if user clicks somewhere else
-        window.onclick = function(event) {
-            if (!event.target.matches('.profile')) {
-                var dropdowns = document.getElementsByClassName("dropdown-content");
-                var i;
-                for (i = 0; i < dropdowns.length; i++) {
-                    var openDropdown = dropdowns[i];
-                    openDropdown.classList.remove('show');
-                    }
-            }
-            }
-        </script>
 </html>
