@@ -13,11 +13,7 @@ body, html {
 }
 
 .header {
-<<<<<<< HEAD
     height: 2%;
-=======
-    height: 3%;
->>>>>>> bbeeac33059291143df2ecb0474777b6205c68f6
 
 }
 
@@ -35,11 +31,7 @@ body, html {
 
 .form-div {
     width: 40%;
-<<<<<<< HEAD
-    background-color: #5EAAA8;
-=======
     background-color: #b7ad9f;
->>>>>>> bbeeac33059291143df2ecb0474777b6205c68f6
     padding: 25px;
 
 }  
