@@ -4,28 +4,24 @@
     <link rel="icon" href="img/logo.png">
     <link rel="stylesheet" href="style/sign-in-page.css">
 </head>
-<script>
-    function myFunction() {
-        // Get the value of the input field with id="numb"
-        let x = document.getElementById("password").value;
-        // If x is Not a Number or less than one or greater than 10
-        let text;
-        if (isNaN(x) || x < 1 || x > 10) {
-            text = "Input not valid";
-        } else {
-            text = "Input OK";
-        }
-        document.getElementById("demo").innerHTML = text;
-    }
-</script>
+
+<script type="text/javascript" src="script/sign-in-page.js"></script>      
+
 <html>
-    <div class="header">&nbsp;</div>
+
+    <!--Header part-->
+    <div class="col-12 row-1 header">
+            <div class="col-1 logo" >
+                <img class="logo_img" src="img/logo.png">
+            </div>
+            <div class="col-2 title"><p>Spop.ify</p></div>
+        </div>
     
-    <div class="flex-container">
+    <div class="row-11 flex-container">
         <div class="sides">&nbsp;</div>
         
         <div class = "form-div">
-            <p>Personal information:</p>
+            <h1>Personal information:</h1>
 
             <p>Name:</p>
             <input id="name">
@@ -41,8 +37,9 @@
 
             <p>Profile picture:</p>
             <input type="file" id="profile_pic">
-
-            <p>Account information:</p>
+        </div>
+        <div class = "form-div">
+            <h1>Account information:</h1>
 
             <p>Username:</p>
             <input id="username">
