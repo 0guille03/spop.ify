@@ -5,8 +5,9 @@
     <link rel="stylesheet" href="style/sign-in-page.css">
 </head>
 <script>
-    function validateForm() {// Get the value of the input field with id="numb"
-        let x = document.getElementById("numb").value;
+    function myFunction() {
+        // Get the value of the input field with id="numb"
+        let x = document.getElementById("password").value;
         // If x is Not a Number or less than one or greater than 10
         let text;
         if (isNaN(x) || x < 1 || x > 10) {
@@ -24,6 +25,7 @@
         <div class="sides">&nbsp;</div>
         
         <div class = "form-div">
+<<<<<<< HEAD
             <form name="signInForm" onsubmit="return validateForm()" method="post">
                 <p>Name:</p> 
                 <input type="text" name="fname">
@@ -33,6 +35,36 @@
                 <input type="submit" value="Submit">
               </form>
               <p id="demo">hola</p>
+=======
+            <p>Personal information:</p>
+
+            <p>Name:</p>
+            <input id="name">
+
+            <p>Surname:</p>
+            <input id="surname">
+
+            <p>Email:</p>
+            <input id="email">
+
+            <p>Date of birth:</p>
+            <input type="date" id="email">
+
+            <p>Profile picture:</p>
+            <input type="file" id="profile_pic">
+
+            <p>Account information:</p>
+
+            <p>Username:</p>
+            <input id="username">
+
+            <p>Password:</p>
+            <input type="password" id="password">
+
+            <button type="button" onclick="myFunction()">Submit</button>
+
+            <p id="demo"></p>
+>>>>>>> bbeeac33059291143df2ecb0474777b6205c68f6
         </div>
         
         <div class="sides">&nbsp;</div>  
