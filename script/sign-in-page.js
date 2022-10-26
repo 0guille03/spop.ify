@@ -1,4 +1,3 @@
-
 function myFunction() {
     // Get the value of the input field with id="numb"
     let x = document.getElementById("name").value;
