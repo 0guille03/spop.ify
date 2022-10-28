@@ -73,7 +73,6 @@ body, html {
     font-size: 16px;
     border: none;
     cursor: pointer;
-    background: url("./img/profile_pic/default_profile.jpg");
     z-index: 100;
   }
   
