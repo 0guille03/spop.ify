@@ -1,7 +1,13 @@
-var countDownDate = new Date("Nov 19, 2022 00:00:00").getTime();
+var countDownDate1 = new Date("Oct 21, 2022 06:00:00").getTime();
+var countDownDate2 = new Date("Nov 12, 2021 06:00:00").getTime();
+var countDownDate3 = new Date("Apr 9, 2021 06:00:00").getTime();
+
 // Update the count down every 1 second
-var x = setInterval(myCountdown, 1000);
-function myCountdown(){
+var x1 = setInterval(myCountdown, 1000, countDownDate1, "countdown1");
+var x2 = setInterval(myCountdown, 1000, countDownDate2, "countdown2");
+var x2 = setInterval(myCountdown, 1000, countDownDate3, "countdown3");
+
+function myCountdown(countDownDate, id){
     // Get today's date and time
     var now = new Date().getTime();
     
@@ -15,12 +21,12 @@ function myCountdown(){
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
         
     // Output the result in an element with id="demo"
-    document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
+    document.getElementById(id).innerHTML = days + "d " + hours + "h "
     + minutes + "m " + seconds + "s ";
         
     // If the count down is over, write some text 
     if (distance < 0) {
         clearInterval(x);
-        document.getElementById("countdown").innerHTML = "EXPIRED";
+        document.getElementById(id).innerHTML = "EXPIRED";
     }
 }

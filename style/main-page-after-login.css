@@ -66,7 +66,6 @@ body, html {
 }
 
 /*Classes for the drop-down menu that appears when clicking on the profile picture*/
-/*https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_js_dropdown_right*/
   .dropdown-content {
     display: none;
     background-color: #f1f1f1;
