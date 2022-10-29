@@ -1,22 +1,26 @@
-function myFunction() {
+function checkPassword () {
     // Get the value of the input field with id="numb"
-    let x = document.getElementById("name").value;
-    // If x is Not a Number or less than one or greater than 10
-    let text;
-    if (isNaN(x) || x < 1 || x > 10) {
+    let x = document.getElementById("password").value;
+    let text = "holi";
+
+    var re = new RegExp("^([a-z0-9]{5,})$");
+    if (re.test(x)) {
         text = "Input not valid";
     } else {
         text = "Input OK";
+        return false;
     }
-    document.getElementById("demo").innerHTML = x;   
+    document.getElementById("demo").innerHTML = x;
+    return false;  
 }
 
 
 function createCookie() {
-    // Get the value of the input field with id="numb"
-    let x = document.getElementById("name").value;
-    setCookie("cookie_name", x, 30)
-
+    if (document.checkPassword() == true){
+      // Get the value of the input field with id="numb"
+      let x = document.getElementById("name").value;
+      setCookie("cookie_name", x, 30)
+    }
 }
 
 
