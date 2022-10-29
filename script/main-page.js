@@ -15,3 +15,17 @@ if (!event.target.matches('.profile_pic')) {
     }
 }
 }
+$(document).ready(function(){
+    $("#myInput").on("keyup", function() {
+      var value = $(this).val().toLowerCase();
+      $("#myTable .grid-song").filter(function() {
+        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+      });
+      //if (value != "") {
+        //$("#myTable .grid-artist").filter(function(e) {
+          //  $(this).toggle()
+            //e.preventDefault();
+          //});
+      //}
+    });
+  });

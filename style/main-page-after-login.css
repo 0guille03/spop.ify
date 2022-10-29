@@ -87,6 +87,23 @@ body, html {
   
   .show {display: block;}
 
+/*For the search engine*/
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+
 /*Menu classes*/
 .menu {
     position: fixed;
