@@ -104,6 +104,25 @@ table {
     background-color: #dddddd;
   }
 
+/* Classes for like button*/
+.song_name {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 45% 10%;
+    padding-top: 5%;
+    justify-content: center;
+}
+
+#like1, #like2, #like3, #like4, #like5, #like6, #like7, #like8, #like9, #like10, #like11, #like12, #like13, #like14, #like15{
+    cursor: pointer;
+  }
+
+#filled_like1, #filled_like2, #filled_like3, #filled_like4, #filled_like5, #filled_like6, #filled_like7, #filled_like8, #filled_like9, #filled_like10, #filled_like11, #filled_like12, #filled_like13, #filled_like14, #filled_like15{
+    display: none;
+    cursor: pointer;
+    position: relative;
+}
+
 /*Menu classes*/
 .menu {
     position: fixed;
@@ -159,6 +178,7 @@ table {
     width: 100%;
     height: 100%;
     justify-content: center;
+    padding-top: 10%;
 }
 
 .cover{
