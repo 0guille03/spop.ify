@@ -13,20 +13,34 @@ function checkForm() {
     let name = document.getElementById("name").value;
     if (!(checkReg(name, "^([A-Za-z][a-z]+)$"))){
       output = "Incorrect name format";
-      return output
+      return output;
     }
     // Check surname 
     let surname = document.getElementById("surname").value;
     if (!(checkReg(surname, "^([A-Za-z][a-z]+)$"))){
       output = "Incorrect surname format";
-      return output
+      return output;
     }
     // Check email 
     let email = document.getElementById("email").value;
     if (!(checkReg(email, "^([A-Za-z0-9]+@[A-Za-z0-9]+\.[A-Za-z0-9]{1,3})$"))){
       output = "Incorrect email format";
-      return output
+      return output;
     }
+    // Check username 
+    let username = document.getElementById("username").value;
+    if (!(checkReg(username, "^([A-Za-z0-9]+)$"))){
+      output = "Incorrect username format";
+      return output;
+    }
+    // Check username 
+    let password = document.getElementById("password").value;
+    if (!(checkReg(password, "^([A-Za-z0-9]{1,8})$"))){
+      output = "Incorrect password format";
+      return output;
+    }
+    return output;
+
     /*// Check dob 
     let dob = document.getElementById("dob").value;
     let today = new Date().toISOString().slice(0, 10)
@@ -35,18 +49,11 @@ function checkForm() {
       return output
     }*/
     // Check username 
-    let username = document.getElementById("username").value;
+    /*let username = document.getElementById("username").value;
     if (!(checkReg(username, "^([A-Za-z0-9]+$"))){
       output = "Incorrect username format";
-      return output
-    }/*
-    // Check password 
-    let password = document.getElementById("password").value;
-    if (!(checkReg(password, "^([A-Za-z0-9]{1,8}$"))){
-      output = "Incorrect password format";
-      return output
+      return output;
     }*/
-    return output
   }    
 
 

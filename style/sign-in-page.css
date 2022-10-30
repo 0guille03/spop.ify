@@ -87,3 +87,15 @@ body, html {
 .row-10 {height: 83.33%;}
 .row-11 {height: 91.66%;}
 .row-12 {height: 100%;}
+
+
+@media only screen and (max-width: 600px) {
+    /* Display for mobile phones */
+    .sides {
+        width: 0;
+    }
+    .form-div {
+        width: 50%;
+    
+    }
+}
