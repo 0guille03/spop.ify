@@ -77,13 +77,15 @@ function validateForm() {
         let pict = document.getElementById("pict").value;
         let password = document.getElementById("password").value;
         var list = [password, name, surname, email, dob, pict];
+        
+        let cookie_text = getCookie(username);
 
-        var user_cookie = JSON.parse( getCookie(username) );
-
-        if (user_cookie == ""){
+        if (cookie_text == ""){
             setCookie(username, JSON.stringify(list), 30);
+            window.location.href = "main-page-after-login.html";
         }else{
             output = "The user already exixts";
+            //var user_cookie = JSON.parse();
         }
     }
     document.getElementById("demo").innerHTML = output;
