@@ -49,31 +49,6 @@ function setCookie(cname,cvalue,exdays) {
     document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 }
 
-function validateForm() {
-    let output = checkForm();
-    if (output == ""){
-        alert("Correct form");
-        let username = document.getElementById("username").value;
-        let name = document.getElementById("name").value;
-        let surname = document.getElementById("surname").value;
-        let email = document.getElementById("email").value;
-        let dob = document.getElementById("dob").value;
-        let pict = document.getElementById("pict").value;
-        let password = document.getElementById("password").value;
-        var list = [password, name, surname, email, dob, pict];
-        setCookie(username, JSON.stringify(list), 30);
-        output = "cookie created";
-    }
-    document.getElementById("demo").innerHTML = output;
-}
-
-function setCookie(cname,cvalue,exdays) {
-    const d = new Date();
-    d.setTime(d.getTime() + (exdays*24*60*60*1000));
-    let expires = "expires=" + d.toUTCString();
-    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-}
-  
 function getCookie(cname) {
     let name = cname + "=";
     let decodedCookie = decodeURIComponent(document.cookie);
@@ -89,15 +64,28 @@ function getCookie(cname) {
     }
     return "";
 }
-  
-function checkCookie() {
-    let user = getCookie("username");
-    if (user != "") {
-      alert("Welcome again " + user);
-    } else {
-       user = prompt("Please enter your name:","");
-       if (user != "" && user != null) {
-         setCookie("username", user, 30);
-       }
+
+function validateForm() {
+    let output = checkForm();
+    if (output == ""){
+        // Get inputed values
+        let username = document.getElementById("username").value;
+        let name = document.getElementById("name").value;
+        let surname = document.getElementById("surname").value;
+        let email = document.getElementById("email").value;
+        let dob = document.getElementById("dob").value;
+        let pict = document.getElementById("pict").value;
+        let password = document.getElementById("password").value;
+        var list = [password, name, surname, email, dob, pict];
+
+        var user_cookie = JSON.parse( getCookie(username) );
+
+        if (user_cookie == ""){
+            setCookie(username, JSON.stringify(list), 30);
+        }else{
+            output = "The user already exixts";
+        }
     }
+    document.getElementById("demo").innerHTML = output;
 }
+  
