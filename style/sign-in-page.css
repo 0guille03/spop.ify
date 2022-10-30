@@ -49,13 +49,12 @@ body, html {
 }
   
 .sides {
-    width: 30%;
-    padding: 20px;
+    width: 25%;
     font-size: 30px;
 }
 
 .form-div {
-    width: 20%;
+    width: 25%;
     background-color: #E6DDC4;
     padding: 25px;
 
@@ -91,11 +90,20 @@ body, html {
 
 @media only screen and (max-width: 600px) {
     /* Display for mobile phones */
+    
+    .title{
+        width: 50%;
+    }
+    .logo{
+        width: 20%;
+    }
     .sides {
         width: 0;
     }
     .form-div {
         width: 50%;
-    
+    }
+    html {
+        background-color: #E6DDC4;
     }
 }
