@@ -46,10 +46,12 @@ body, html {
 .flex-container {
     display: flex;
     color: #000000;
+    background-color: #E6DDC4;
 }
   
 .sides {
     width: 25%;
+    background-color: #F0E9D2;
     font-size: 30px;
 }
 
@@ -59,6 +61,59 @@ body, html {
     padding: 25px;
 
 }  
+
+#google_signup {
+    display: flex;
+    align-items: center;
+    background: white;
+    color: #444;
+    width: 52%;
+    border-radius: 8px;
+    border: thin solid #888;
+    box-shadow: 1px 1px 1px grey;
+    white-space: nowrap;
+    font-family: 'Roboto', sans-serif;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    transition: 0.3s;
+    }
+  
+  #google_signup img{
+    float:left;
+    height:30px;
+    margin-right: 10px;
+  }
+  
+  #google_signup:hover, #fb_signup:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    }
+  
+  #fb_signup{
+    display: flex;
+    align-items: center;
+    background: #1877F2;
+    color: white;
+    width: 52%;
+    border-radius: 8px;
+    white-space: nowrap;
+    font-family: 'Roboto', sans-serif;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    box-shadow: 1px 1px 1px grey;
+    transition: 0.3s;
+  
+  }
+  #fb_signup img{
+    float:left;
+    height:30px;
+  }
 
 
 .col-1 {width: 8.33%;}
