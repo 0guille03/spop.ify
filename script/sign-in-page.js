@@ -92,3 +92,9 @@ function validateForm() {
     document.getElementById("demo").innerHTML = output;
 }
   
+function checkUser() {
+    let cookie_text = getCookie("username");
+    if (cookie_text != ""){
+        window.location.href = "main-page-after-login.html";
+    }
+}

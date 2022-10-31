@@ -26,7 +26,30 @@ function myCountdown(countDownDate, id){
         
     // If the count down is over, write some text 
     if (distance < 0) {
-        clearInterval(x);
         document.getElementById(id).innerHTML = "EXPIRED";
+    }
+}
+
+function getCookie(cname) {
+    let name = cname + "=";
+    let decodedCookie = decodeURIComponent(document.cookie);
+    let ca = decodedCookie.split(';');
+    for(let i = 0; i < ca.length; i++) {
+      let c = ca[i];
+      while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+      }
+      if (c.indexOf(name) == 0) {
+        return c.substring(name.length, c.length);
+      }
+    }
+    return "";
+}
+
+function checkUser() {
+    alert("no va");
+    let cookie_text = getCookie("username");
+    if (cookie_text != ""){
+        window.location.href = "main-page-after-login.html";
     }
 }
