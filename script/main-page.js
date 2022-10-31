@@ -159,3 +159,8 @@ $(document).ready(function(){
         $('#filled_like15').css("display", "none");
     });
   });  
+
+
+function deleteCookie(name) {
+    document.cookie = name +'=; Path=/; Expires=Thu, 13 Dec 1989 00:00:01 GMT;';
+}
