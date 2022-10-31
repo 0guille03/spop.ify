@@ -105,7 +105,7 @@ table {
   }
 
 /* Classes for like button*/
-.song_name {
+.song-name {
     display: grid;
     width: 100%;
     grid-template-columns: 45% 10%;
