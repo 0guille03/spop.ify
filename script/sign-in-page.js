@@ -82,6 +82,7 @@ function validateForm() {
 
         if (cookie_text == ""){
             setCookie(username, JSON.stringify(list), 30);
+            setCookie("username", username, 30);
             window.location.href = "main-page-after-login.html";
         }else{
             output = "The user already exixts";
