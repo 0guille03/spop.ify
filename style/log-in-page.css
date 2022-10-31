@@ -54,7 +54,7 @@ body, html {
 }
 
 .form-div {
-    width: 25%;
+    width: 50%;
     background-color: #E6DDC4;
     padding: 25px;
 
@@ -101,7 +101,7 @@ body, html {
         width: 0;
     }
     .form-div {
-        width: 50%;
+        width: 100%;
     }
     html {
         background-color: #E6DDC4;
