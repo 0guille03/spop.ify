@@ -41,8 +41,8 @@ function validateLogIn() {
         if (user_cookie[0] == password){
             setCookie("username", username, 30);
             window.location.href = "main-page-after-login.html";
-        }
-        output = "Pasword Incorrect";
+        }else{
+            output = "Pasword Incorrect";}
     }
     document.getElementById("demo").innerHTML = output;
 
