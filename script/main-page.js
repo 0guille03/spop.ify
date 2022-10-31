@@ -158,3 +158,12 @@ $(document).ready(function(){
         $('#filled_like15').css("display", "none");
     });
   });
+
+
+
+
+function delCookie() { 
+    var date = new Date();
+    date.setTime(date.getTime()+(-1*24*60*60*1000));
+    document.cookie = "username" + "=" + "deleted" + "; expires=" + date.toGMTString();
+}  
