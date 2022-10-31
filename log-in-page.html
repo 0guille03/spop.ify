@@ -3,7 +3,7 @@
     <head>
         <title>Spop.ify</title>
         <link rel="icon" href="img/logo.png">
-        <link rel="stylesheet" href="style/sign-in-page.css">
+        <link rel="stylesheet" href="style/log-in-page.css">
     </head>  
 
     <body onload='checkUser()'>
@@ -24,6 +24,15 @@
 
                 <p>Password:</p>
                 <input type="password" id="password" maxlength="8">
+                <br><br>
+                <div id= "google_signup">
+                    <img src="./img/google_logo.png" alt="">
+                    <p>Continue with Google</p>
+                  </div>
+                <div id= "fb_signup">
+                    <img src="./img/fb_logo.png" alt="">
+                    <p>Continue with Facebook</p>
+                </div>
 
                 <button type="button" onclick="validateLogIn()">Submit</button>
 
