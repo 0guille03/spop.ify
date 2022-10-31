@@ -89,5 +89,6 @@ function validateForm() {
             //var user_cookie = JSON.parse();
         }
     }
+    document.getElementById("demo").innerHTML = output;
 }
   

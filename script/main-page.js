@@ -15,6 +15,7 @@ if (!event.target.matches('.profile_pic')) {
     }
   }
 }
+
 $(document).ready(function(){
     $("#myInput").on("keyup", function() {
       var value = $(this).val().toLowerCase();
@@ -157,13 +158,4 @@ $(document).ready(function(){
         $('#like15').css("display", "inline-flex");
         $('#filled_like15').css("display", "none");
     });
-  });
-
-
-
-
-function delCookie() { 
-    var date = new Date();
-    date.setTime(date.getTime()+(-1*24*60*60*1000));
-    document.cookie = "username" + "=" + "deleted" + "; expires=" + date.toGMTString();
-}  
+  });  
