@@ -27,6 +27,12 @@ function checkForm() {
           output = "Incorrect email format";
           return output;
       }
+      // Check dob 
+      let dob = document.getElementById("dob").value;
+      if (dob == ""){
+          output = "Date of birth should not be empty";
+          return output;
+      }
       // Check username 
       let username = document.getElementById("username").value;
       if (!(checkReg(username, "^([A-Za-z0-9]+)$"))){
@@ -42,7 +48,7 @@ function checkForm() {
       // Check accepted terms 
       let checkbox = document.getElementById("checkbox").checked;
       if (!checkbox){
-          output = "You have to accept the service terms";
+          output = "You have to accept the Terms of use";
           return output;
       }
       return output;
@@ -97,8 +103,20 @@ function validateForm() {
     }
     document.getElementById("demo").innerHTML = output;
 }
+
+function defaultValues(){
+    document.getElementById("name").value  = "";
+    document.getElementById("surname").value  = "";
+    document.getElementById("email").value  = "";
+    document.getElementById("dob").value  = "";
+    document.getElementById("pict").value  = "";
+    document.getElementById("username").value  = "";
+    document.getElementById("password").value  = "";
+    document.getElementById("checkbox").checked   = false;
+}
   
 function checkUser() {
+    defaultValues()
     let cookie_text = getCookie("username");
     if (cookie_text != ""){
         window.location.href = "main-page-after-login.html";
