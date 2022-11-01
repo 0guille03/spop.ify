@@ -39,6 +39,12 @@ function checkForm() {
           output = "Incorrect password format";
           return output;
       }
+      // Check accepted terms 
+      let checkbox = document.getElementById("checkbox").checked;
+      if (!checkbox){
+          output = "You have to accept the service terms";
+          return output;
+      }
       return output;
   }    
 
