@@ -1,12 +1,4 @@
 /* Classes for like button*/
-.song-name {
-    display: grid;
-    width: 100%;
-    grid-template-columns: 45% 10%;
-    padding-top: 5%;
-    justify-content: center;
-}
-
 #like1, #like2, #like3, #like4, #like5, #like6, #like7, #like8, #like9, #like10, #like11, #like12, #like13, #like14, #like15{
     cursor: pointer;
   }
@@ -44,6 +36,14 @@
     padding-left: 30px;
     padding-bottom: 30px;
   }
+
+.song-name {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 45% 10%;
+    padding-top: 5%;
+    justify-content: center;
+}
 
 .grid-song {
     position:relative;
