@@ -14,6 +14,9 @@ if (!event.target.matches('.profile_pic')) {
       }
     }
   }
+if (event.target.matches('.cover')) {
+    changeSong()
+}
 }
 
 $(document).ready(function(){
@@ -168,3 +171,9 @@ function deleteCookie(name) {
 $(function() {
   $('audio').audioPlayer();
 });
+
+
+function changeSong(file){
+  document.getElementById("audio").setAttribute('src', file);
+  //audio.play(); //call this to play the song right away
+}
