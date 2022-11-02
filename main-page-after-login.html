@@ -5,6 +5,7 @@
         <title>Spop.ify</title>
         <link rel="icon" href="img/logo.png">
         <link rel="stylesheet" href="style/main-page-after-login.css">
+        <link rel="stylesheet" href="style/audioplayer.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
         
     </head>
@@ -357,9 +358,6 @@
                             <div class="grid2">
                                 <div>
                                     <img class="cover" src="img/pop/girl-of-my-dreams.jpg">
-                                        <audio controls>
-                                            <source src="audio/pop/serial-heartbreaker.mp3" type="audio/mpeg">
-                                        </audio>
                                 </div>
                                 <div class="song-name">
                                     <div>
@@ -377,35 +375,15 @@
                 </div> 
             </div>
             <div class="col-12 row-1 footer">
-                <div class="audioplayer">
-                    <audio preload="auto" controls style="width: 0px; height: 0px; visibility: hidden;">
-                      <source src="audio/ts/mr-perfectly-fine.mp3">
-                    </audio>
-                    <div class="audioplayer-playpause" title=""><a href="#"></a></div>
-                    <div class="audioplayer-time audioplayer-time-current">00:00</div>
-                    <div class="audioplayer-bar">
-                      <div class="audioplayer-bar-loaded" style="width: 100%;"></div>
-                      <div class="audioplayer-bar-played"></div>
-                    </div>
-                    <div class="audioplayer-time audioplayer-time-duration">00:56</div>
-                    <div class="audioplayer-volume">
-                      <div class="audioplayer-volume-button" title=""><a href="#"></a></div>
-                      <div class="audioplayer-volume-adjust">
-                        <div>
-                          <div style="width: 100%;"></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                <audio preload="auto" controls>
+					<source src="audio/ts/all-too-well-tv.mp3">
+                </audio>
             </div>
         </div>
         <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="script/main-page.js"></script>
-        <link rel="stylesheet" href="css/audioplayer.css">
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-                integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-                crossorigin="anonymous"></script>
-        <script src="js/audioplayer.js"></script>
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="script/audioplayer.js"></script>
         
     </body>
 </html>
