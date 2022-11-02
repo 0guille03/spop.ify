@@ -1,55 +1,4 @@
-* {
-    box-sizing: border-box;
-}
-
-html {
-    font-family: "Lucida Sans", sans-serif;
-    width: 100% !important;
-}
-
-body, html {
-    background-color: #E6DDC4;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-}
-
-.flex-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    height: 100%;
-    width: 100%;
-  }
-
 /*Header classes*/
-.header {
-    position: fixed;
-    top: 0;
-    z-index: 100;
-    display: flex;
-    align-items: center;
-    background-color: #056676;
-    color: #ffffff;
-}
-
-.logo {
-    height: 100%;
-}
-
-.logo_img{
-    height: 100%;
-    position: absolute;
-    left: 10px;
-    padding: 5px;
-}
-
-.title {
-    font-size: 30px;
-}
-
 a {
     color: #ffffff;
 }
@@ -58,10 +7,6 @@ a {
 }
 
 /*Main page content*/
-.main {
-    background-color: #F0E9D2;
-}
-
 .cover{
     top: 0;
     height: 100%;
@@ -87,50 +32,10 @@ a {
 
 
 /*To adjust with and height*/
-[class*="col-"] {
-    float: left;
-}
-
-.col-1 {width: 8.33%;}
-.col-2 {width: 16.66%;}
-.col-3 {width: 25%;}
-.col-4 {width: 33.33%;}
-.col-5 {width: 41.66%;}
-.col-6 {width: 50%;}
-.col-7 {width: 58.33%;}
-.col-8 {width: 66.66%;}
-.col-9 {width: 75%;}
-.col-10 {width: 83.33%;}
-.col-11 {width: 91.66%;}
-.col-12 {width: 100%;}
-
-.row-1 {height: 8.33%;}
-.row-2 {height: 16.66%;}
-.row-3 {height: 25%;}
-.row-4 {height: 33.33%;}
-.row-5 {height: 41.66%;}
-.row-6 {height: 50%;}
-.row-7 {height: 58.33%;}
-.row-8 {height: 66.66%;}
-.row-9 {height: 75%;}
-.row-10 {height: 83.33%;}
-.row-11 {height: 91.66%;}
-.row-12 {height: 100%;}
-
-
 /*responsive part*/
 
 @media only screen and (max-width: 1200px) {
     /* Intermediate display between desktop and tablet */
-    .title{
-        width: 49%;
-    }
-    .logo{
-        width: 20%;
-    }
-    .empty_cont{
-        width: 100%;
-    }
     .signin, .login{
         width: 15%;
     }
@@ -138,16 +43,6 @@ a {
 
 @media only screen and (max-width: 768px) {
     /* Display for tablet */
-    .title{
-        width: 49%;
-        left:0;
-    }
-    .logo{
-        width: 20%;
-    }
-    .empty_cont{
-        width: 90%;
-    }
     .signin, .login{
         width: 15%;
         padding-right: 2%;
@@ -156,31 +51,9 @@ a {
 
 @media only screen and (max-width: 600px) {
     /* Display for mobile phones */
-    [class*="col-"] {
-        width: 100%;
-    }
-    [class*="row-"] {
-        height:fit-content;
-    }
-    .footer, .header{
+    .footer{
         position:static;
         bottom: 0;
-    }
-    .title{
-        width: 49%;
-    }
-    .logo{
-        width: 20%;
-    }
-    .logo_img{
-        height: 50%;
-        width: 50%;
-        position:static;
-        left: 10px;
-        padding: 0;
-    }
-    .empty_cont{
-        width: 0;
     }
     .signin, .login{
         width: 15%;
@@ -189,31 +62,9 @@ a {
 
 @media only screen and (max-width: 340px) {
     /* Display for mobile phones */
-    [class*="col-"] {
-        width: 100%;
-    }
-    [class*="row-"] {
-        height:fit-content;
-    }
-    .footer, .header{
+    .footer{
         position:static;
         bottom: 0;
-    }
-    .title{
-        width: 50%;
-    }
-    .logo{
-        width: 20%;
-    }
-    .logo_img{
-        height: 50%;
-        width: 50%;
-        position:static;
-        left: 10px;
-        padding: 0;
-    }
-    .empty_cont{
-        width: 0;
     }
     .signin, .login{
         width: 15%;
