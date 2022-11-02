@@ -164,3 +164,7 @@ $(document).ready(function(){
 function deleteCookie(name) {
     document.cookie = name +'=; Path=/; Expires=Thu, 13 Dec 1989 00:00:01 GMT;';
 }
+
+$(function() {
+  $('audio').audioPlayer();
+});

@@ -153,6 +153,7 @@ table {
     width: 100%;
     grid-template-columns: 20% 20% 20% 20% 20%;
     padding-top: 2%;
+    padding-bottom: 8%;
     justify-content: left;
 }
 .grid2{  
@@ -207,6 +208,19 @@ audio{
     z-index:10;
     width: 150px;
     display:none;
+}
+
+/*Footer content*/
+.footer {
+    /*display:none;*/
+    position: fixed;
+    bottom: 0;
+    background-color: #056676;
+    color: #ffffff;
+    text-align: center;
+    z-index: 20;
+    font-size: 12px;
+    padding: 15px;
 }
 
 /*To adjust with and height*/
