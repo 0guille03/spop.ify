@@ -138,6 +138,11 @@ table {
     background-color: #5EAAA8;
 } 
 
+.menu a{
+    color: black;
+    text-decoration: none;
+}
+
 .menu li:hover {
     background-color: #056676;
 }
