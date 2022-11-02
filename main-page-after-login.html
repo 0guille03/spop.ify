@@ -12,7 +12,7 @@
     </head>
 
     
-    <body>
+    <body onload="loadProfilePic()">
         <div class="flex-container">
             <!--Header part-->
             <div class="col-12 row-1 header">
@@ -22,7 +22,7 @@
                 <div class="col-2 title"><p>Spop.ify</p></div>
                 <div class="col-8 empty_cont">&nbsp;</div>
                 <div class="col-1 profile">
-                    <img onclick="myFunction()" class="profile_pic" src="img/profile_pic/default_profile.jpg">
+                    <img onclick="myFunction()" class="profile_pic" id="profile" src="img/profile_pic/default_profile.jpg">
                     <div id="myDropdown" class="dropdown-content">
                         <a href="account.html">Account</a>
                         <a href="profile.html">Profile</a>

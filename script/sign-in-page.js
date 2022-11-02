@@ -7,6 +7,15 @@ function checkReg (string, re) {
     return false;
 }
 
+const isValidUrl = urlString=> {
+    try { 
+        return Boolean(new URL(urlString)); 
+    }
+    catch(e){ 
+        return false; 
+    }
+}
+
 function checkForm() {
       let output = "";
       // Check name 
@@ -50,6 +59,15 @@ function checkForm() {
       if (!checkbox){
           output = "You have to accept the Terms of use";
           return output;
+      }
+      // Check picture url terms 
+      let pict = document.getElementById("pict").checked;
+      if (!(isValidUrl(pict))){
+        if (pict != ""){
+            output = "The inputed image is not a correct url.";
+            return output;
+
+        }
       }
       return output;
   }    
