@@ -6,68 +6,290 @@
         <link rel="icon" href="img/logo.png">
         <link rel="stylesheet" href="style/profile.css">
         <link rel="stylesheet" href="style/style.css">
+        <link rel="stylesheet" href="style/audioplayer.css">
     </head> 
 
-    <body>
+    <body onload="loadUserInfo()">
         <div class="flex-container">
             <!--Header part-->
-                    <div class="col-12 row-1 header">
-                        <div class="col-1 logo" >
-                            <img class="logo_img" src="img/logo.png">
-                        </div>
-                        <div class="col-2 title"><p>Spop.ify</p></div>
-                        <div class="col-8 empty_cont">&nbsp;</div>
-                        <div class="col-1 profile">
-                            <img onclick="myFunction()" class="profile_pic" src="img/profile_pic/default_profile.jpg">
-                            <div id="myDropdown" class="dropdown-content">
-                              <a href="account.html">Account</a>
-                              <a href="profile.html">Profile</a>
-                              <a href="main-page-before-login.html">Logout</a>
-                            </div>
-                        </div>  
+            <div class="col-12 row-1 header">
+                <div class="col-1 logo" >
+                    <img class="logo_img" src="img/logo.png">
+                </div>
+                <div class="col-2 title"><p>Spop.ify</p></div>
+                <div class="col-8 empty_cont">&nbsp;</div>
+                <div class="col-1 profile">
+                    <img onclick="myFunction()" class="profile_pic" id="profile" src="img/profile_pic/default_profile.jpg">
+                    <div id="myDropdown" class="dropdown-content">
+                        <a href="account.html">Account</a>
+                        <a href="profile.html">Profile</a>
+                        <a href="main-page-before-login.html">Logout</a>
                     </div>
+                </div>  
+            </div>
 
-                    <div class = "col-12 row-11 flex-container">
-                        <!--Menu part-->
-                        <div class = "col-3">
-                            &nbsp;
-                            <div class="menu col-3" style="top: 10%;">
-                                <ul>
-                                    <li>
-                                        <a href="main-page-after-login.html">
-                                            <img src="img/menu/home.png" width="15" height="15">
-                                            Home
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <img src="img/menu/heart.png" width="15" height="15">
-                                        Favorite songs
-                                    </li>
-                                    <li>
-                                        <img src="img/menu/playlist.png" width="15" height="15">
-                                        Playlists
-                                    </li>
-                                    <li>
-                                        <img src="img/menu/settings.png" width="15" height="15">
-                                        Settings
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="menu col-3" style="bottom:0;">
-                                <ul>
-                                    <li>About us</li>
-                                    <li>Privacy and cookies policy</li>
-                                </ul>
+            <div class = "col-12 row-11 flex-container">
+                <!--Menu part-->
+                <div class = "col-3">
+                    &nbsp;
+                    <div class="menu col-3" style="top: 10%;">
+                        <ul>
+                            <li>
+                                <a href="main-page-after-login.html">
+                                    <img src="img/menu/home.png" width="15" height="15">
+                                    Home
+                                </a>
+                            </li>
+                            <li>
+                                <img src="img/menu/heart.png" width="15" height="15">
+                                Favorite songs
+                            </li>
+                            <li>
+                                <img src="img/menu/playlist.png" width="15" height="15">
+                                Playlists
+                            </li>
+                            <li>
+                                <img src="img/menu/settings.png" width="15" height="15">
+                                Settings
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="menu col-3" style="bottom:9%;">
+                        <ul>
+                            <li>About us</li>
+                            <li>Privacy and cookies policy</li>
+                        </ul>
+                    </div>
+                </div>
+                    
+                <!--Main part-->
+                <div class="col-9 main">
+                    <br>
+                    <div class="grid-container">
+
+                        <div class="artist-picture">
+                            <img src="img/profile_pic/default_profile.jpg" id="profile_picture">
+                        </div>
+
+                        <div class="artist-name" id="username">
+                            Username
+                        </div>
+
+                        <div class="title">
+                            Top Artists
+                        </div>
+
+                        <div class="grid-song">
+                            <div class="grid2">
+                                <div>
+                                    <img class="cover" onclick="redirectArtist()" src="img/artist/ts.jpg" width="150" height="150">
+                                </div>
+                                <div class="song-name">
+                                    <div>
+                                        Taylor Swift
+                                    </div>
+                                </div>
                             </div>
                         </div>
+                        <div class="grid-song">
+                            <div class="grid2">
+                                <div>
+                                    <img class="cover" src="img/artist/hs.jpg" width="150" height="150">
+                                </div>
+                                <div class="song-name">
+                                    <div>
+                                        Harry Styles
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-song">
+                            <div class="grid2">
+                                <div>
+                                    <img class="cover" src="img/artist/lauv.jpg" width="150" height="150">
+                                </div>
+                                <div class="song-name">
+                                    <div>
+                                        Lauv
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="grid-song">
+                            <div class="grid2">
+                                <div>
+                                    <img class="cover" src="img/artist/dc.jpg" width="150" height="150">
+                                </div>
+                                <div class="song-name">
+                                    <div>
+                                        Dove Cameron
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-song">
+                            <div class="grid2">
+                                <div>
+                                    <img class="cover" src="img/artist/sm.jpg" width="150" height="150">
+                                </div>
+                                <div class="song-name">
+                                    <div>
+                                        Shawn Mendes
+                                    </div>
+                                </div>
+                            </div>                             
+                        </div>  
+                        
+                        <div class="title">
+                            Most Played Songs
+                        </div>
+                        <div class="grid-song">
+                            <div class="grid2">
+                                <div id="Taylor Swift - Mr. Perfectly Fine">
+                                    <img class="cover" src="img/ts/fearless-tv.jpg" width="150" height="150" onclick='changeSong("audio/ts/all-too-well-tv.mp3")'>
+                                </div>
+                                <div class="song-name">
+                                    <div>
+                                        Mr. Perfectly Fine
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="grid-song">
+                            <div class="grid2">
+                                <div>
+                                    <img class="cover" src="img/pop/all-4-nothing.jpg" width="150" height="150">
+                                </div>
+                                <div class="song-name">
+                                    <div>
+                                        Stranger
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-song">
+                            <div class="grid2">
+                                <div>
+                                    <img class="cover" src="img/ts/1989-tv.jpg" width="150" height="150">
+                                </div>
+                                <div class="song-name">
+                                    <div>
+                                        This Love
+                                    </div>
+                                </div>
+                                    
+                            </div>                             
+                        </div>  
+                        <div class="grid-song">
+                            <div class="grid2">
+                                <div>
+                                    <img class="cover" src="img/ts/lover.jpg" width="150" height="150">
+                                </div>
+                                <div class="song-name">
+                                    <div>
+                                        Paper Rings
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-song">
+                            <div class="grid2">
+                                <div>
+                                    <img class="cover" src="img/ts/folklore.jpg" width="150" height="150">
+                                </div>
+                                <div class="song-name">
+                                    <div>
+                                        Exile
+                                    </div>
+                                </div>
+                            </div>
                             
-                        <!--Main part-->
-                        <div class="col-9 main">
-                            <h1>PROFILE</h1>                    
-                        </div> 
-                    </div>
+                        </div>
+                        <div class="title">
+                            Playlists
+                        </div>
+                        <div class="title">
+                            Followers
+                        </div>
+                        <div class="grid-song">
+                            <div class="grid2">
+                                <div>
+                                    <img class="cover" onclick="redirectFollower()" src="https://images.wsj.net/im-521202?width=1280&size=1" width="150" height="150">
+                                </div>
+                                <div class="song-name">
+                                    <div>
+                                        William Bowery
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-song">
+                            <div class="grid2">
+                                <div>
+                                    <img class="cover" src="img/artist/hs.jpg" width="150" height="150">
+                                </div>
+                                <div class="song-name">
+                                    <div>
+                                        Nils Sjöberg
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-song">
+                            <div class="grid2">
+                                <div>
+                                    <img class="cover" src="img/artist/lauv.jpg" width="150" height="150">
+                                </div>
+                                <div class="song-name">
+                                    <div>
+                                        Lauv
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="grid-song">
+                            <div class="grid2">
+                                <div>
+                                    <img class="cover" src="img/artist/dc.jpg" width="150" height="150">
+                                </div>
+                                <div class="song-name">
+                                    <div>
+                                        Dove Cameron
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-song">
+                            <div class="grid2">
+                                <div>
+                                    <img class="cover" src="img/artist/sm.jpg" width="150" height="150">
+                                </div>
+                                <div class="song-name">
+                                    <div>
+                                        Shawn Mendes
+                                    </div>
+                                </div>
+                            </div>                             
+                        </div>  
+
+                    </div>                     
+                </div> 
+            </div>
+                    
+            <div class="col-12 row-1 footer">
+                <audio preload="auto" id= "audio" controls>
+					<source src="audio/ts/this-love.mp3">
+                </audio>
+            </div>
         </div>
 
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="script/main-page.js"></script>
+    <script type="text/javascript" src="script/profile.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="script/audioplayer.js"></script>
     </body>
 </html>

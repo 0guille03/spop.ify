@@ -199,3 +199,8 @@ function loadProfilePic(){
     image.src=user_cookie[5];
   }
 }
+
+
+function goHome(){
+  window.location.href = "main-page-after-login.html";
+}

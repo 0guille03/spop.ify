@@ -30,6 +30,7 @@ function printCookieToAccount(index){
   document.getElementById("surname").defaultValue  =  user_cookie[2];
   document.getElementById("email").defaultValue  = user_cookie[3];
   document.getElementById("dob").defaultValue  = user_cookie[4];
+  document.getElementById("pict").defaultValue  = user_cookie[5];
 }
 
 function checkReg (string, re) {
@@ -123,10 +124,9 @@ function validateForm() {
     setCookie(username, JSON.stringify(list), 30);
     setCookie("username", username, 30);
     window.location.href = "main-page-after-login.html";
-
-    // Output error message
-    document.getElementById("demo").innerHTML = output;
   }
+  // Output error message
+  document.getElementById("demo").innerHTML = output;
 
 }
 

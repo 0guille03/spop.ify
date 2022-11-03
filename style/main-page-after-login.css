@@ -64,17 +64,6 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-/*Footer content*/
-.footer {
-    /*display:none;*/
-    position: fixed;
-    bottom: 0;
-    background-color: #056676;
-    color: #ffffff;
-    text-align: center;
-    z-index: 20;
-}
-
 /*To adjust with and height*/
 [class*="col-"] {
     float: left;

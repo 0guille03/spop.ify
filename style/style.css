@@ -118,6 +118,17 @@ body, html {
     background-color: #F0E9D2;
 }
 
+/*Footer content*/
+.footer {
+    /*display:none;*/
+    position: fixed;
+    bottom: 0;
+    background-color: #056676;
+    color: #ffffff;
+    text-align: center;
+    z-index: 20;
+}
+
 /*To adjust with and height*/
 [class*="col-"] {
     float: left;

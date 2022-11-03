@@ -83,19 +83,3 @@
     transform: scale(1.1);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
-
-.cover:hover + audio{
-    display:inline;
-}
-
-audio:hover{
-    display:inline;
-}
-  
-audio{
-    position:relative;
-    bottom:28%;
-    z-index:10;
-    width: 150px;
-    display:none;
-}
