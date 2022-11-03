@@ -12,7 +12,7 @@
     </head>
 
     
-    <body>
+    <body onload="loadProfilePic()">
         <div class="flex-container">
             <!--Header part-->
             <div class="col-12 row-1 header">
@@ -22,7 +22,7 @@
                 <div class="col-2 title"><p>Spop.ify</p></div>
                 <div class="col-8 empty_cont">&nbsp;</div>
                 <div class="col-1 profile">
-                    <img onclick="myFunction()" class="profile_pic" src="img/profile_pic/default_profile.jpg">
+                    <img onclick="myFunction()" class="profile_pic" id="profile" src="img/profile_pic/default_profile.jpg">
                     <div id="myDropdown" class="dropdown-content">
                         <a href="account.html">Account</a>
                         <a href="profile.html">Profile</a>
@@ -73,8 +73,8 @@
                     <div class="grid-container" id="myTable">
                         <div class="grid-song">
                             <div class="grid2">
-                                <div>
-                                    <img onclick="changeSong('audio/ts/mr-perfectly-fine.mp3')" class="cover" src="img/ts/fearless-tv.jpg" width="150" height="150">
+                                <div id="Taylor Swift - Mr. Perfectly Fine">
+                                    <img class="cover" src="img/ts/fearless-tv.jpg" width="150" height="150" onclick='changeSong("audio/ts/mr-perfectly-fine.mp3")'>
                                 </div>
                                 <div class="song-name">
                                     <div>
@@ -92,7 +92,7 @@
                         <div class="grid-song">
                             <div class="grid2">
                                 <div>
-                                    <img class="cover" src="img/ts/red-tv.jpg" width="150" height="150">
+                                    <img class="cover" src="img/ts/red-tv.jpg" width="150" height="150" onclick='changeSong("audio/ts/all-too-well-tv.mp3")'>
                                 </div>
                                 <div class="song-name">
                                     <div>
@@ -108,7 +108,7 @@
                         <div class="grid-song">
                             <div class="grid2">
                                 <div>
-                                    <img class="cover" src="img/ts/1989-tv.jpg" width="150" height="150">
+                                    <img class="cover" src="img/ts/1989-tv.jpg" width="150" height="150" onclick='changeSong("audio/ts/this-love.mp3")'>
                                 </div>
                                 <div class="song-name">
                                     <div>
@@ -126,7 +126,7 @@
                         <div class="grid-song">
                             <div class="grid2">
                                 <div>
-                                    <img class="cover" src="img/ts/lover.jpg" width="150" height="150">
+                                    <img class="cover" src="img/ts/lover.jpg" width="150" height="150" onclick='changeSong("audio/ts/paper-rings.mp3")'>
                                 </div>
                                 <div class="song-name">
                                     <div>
@@ -143,7 +143,7 @@
                         <div class="grid-song">
                             <div class="grid2">
                                 <div>
-                                    <img class="cover" src="img/ts/folklore.jpg" width="150" height="150">
+                                    <img class="cover" src="img/ts/folklore.jpg" width="150" height="150" onclick='changeSong("audio/ts/exile.mp3")'>
                                 </div>
                                 <div class="song-name">
                                     <div>
@@ -161,7 +161,7 @@
                         <div class="grid-song">
                             <div class="grid2">
                                 <div>
-                                    <img class="cover" src="img/sm/handwritten.jpg">
+                                    <img class="cover" src="img/sm/handwritten.jpg" onclick='changeSong("audio/sm/stitches.mp3")'>
                                 </div>
                                 <div class="song-name">
                                     <div>
@@ -178,7 +178,7 @@
                         <div class="grid-song">
                             <div class="grid2">
                                 <div>
-                                    <img class="cover" src="img/sm/illuminate.jpg">
+                                    <img class="cover" src="img/sm/illuminate.jpg" onclick='changeSong("audio/sm/theres-nothing-holding-me-back.mp3")'>
                                 </div>
                                 <div class="song-name">
                                     <div>
@@ -195,7 +195,7 @@
                         <div class="grid-song">
                             <div class="grid2">
                                 <div>
-                                    <img class="cover" src="img/sm/shawn-mendes.jpg">
+                                    <img class="cover" src="img/sm/shawn-mendes.jpg" onclick='changeSong("audio/sm/in-my-blood.mp3")'>
                                 </div>
                                 <div class="song-name">
                                     <div>
@@ -212,7 +212,7 @@
                         <div class="grid-song">
                             <div class="grid2">
                                 <div>
-                                    <img class="cover" src="img/sm/wonder.jpg">
+                                    <img class="cover" src="img/sm/wonder.jpg" onclick='changeSong("audio/sm/305.mp3")'>
                                 </div>
                                 <div class="song-name">
                                     <div>
@@ -229,7 +229,7 @@
                         <div class="grid-song">
                             <div class="grid2">
                                 <div>
-                                    <img class="cover" src="img/sm/when-youre-gone.jpg">
+                                    <img class="cover" src="img/sm/when-youre-gone.jpg" onclick='changeSong("audio/sm/when-youre-gone.mp3")'>
                                 </div>
                                 <div class="song-name">
                                     <div>
@@ -246,7 +246,7 @@
                         <div class="grid-song">
                             <div class="grid2">
                                 <div>
-                                    <img class="cover" src="img/pop/all-4-nothing.jpg">
+                                    <img class="cover" src="img/pop/all-4-nothing.jpg" onclick='changeSong("audio/pop/stranger.mp3")'>
                                 </div>
                                 <div class="song-name">
                                     <div>
@@ -263,7 +263,7 @@
                         <div class="grid-song">
                             <div class="grid2">
                                 <div>
-                                    <img class="cover" src="img/pop/up-all-night.jpg">
+                                    <img class="cover" src="img/pop/up-all-night.jpg" onclick='changeSong("audio/pop/what-makes-you-beautiful.mp3")'>
                                 </div>
                                 <div class="song-name">
                                     <div>
@@ -280,7 +280,7 @@
                         <div class="grid-song">
                             <div class="grid2">
                                 <div>
-                                    <img class="cover" src="img/pop/montero.jpg">
+                                    <img class="cover" src="img/pop/montero.jpg" onclick='changeSong("audio/pop/thats-what-i-want.mp3")'>
                                 </div>
                                 <div class="song-name">
                                     <div>
@@ -297,7 +297,7 @@
                         <div class="grid-song">
                             <div class="grid2">
                                 <div>
-                                    <img class="cover" src="img/pop/sour.jpg">
+                                    <img class="cover" src="img/pop/sour.jpg" onclick='changeSong("audio/pop/good-4-u.mp3")'>
                                 </div>
                                 <div class="song-name">
                                     <div>
@@ -314,7 +314,7 @@
                         <div class="grid-song">
                             <div class="grid2">
                                 <div>
-                                    <img class="cover" src="img/pop/girl-of-my-dreams.jpg">
+                                    <img class="cover" src="img/pop/girl-of-my-dreams.jpg" onclick='changeSong("audio/pop/serial-heartbreaker.mp3")'>
                                 </div>
                                 <div class="song-name">
                                     <div>
@@ -333,7 +333,7 @@
             </div>
             <div class="col-12 row-1 footer">
                 <audio preload="auto" id= "audio" controls>
-					<source src="audio/ts/all-too-well-tv.mp3">
+					<source src="audio/ts/this-love.mp3">
                 </audio>
             </div>
         </div>

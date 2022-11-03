@@ -14,9 +14,6 @@ if (!event.target.matches('.profile_pic')) {
       }
     }
   }
-if (event.target.matches('.cover')) {
-    changeSong()
-}
 }
 
 $(document).ready(function(){
@@ -163,17 +160,42 @@ $(document).ready(function(){
     });
   });  
 
+function getCookie(cname) {
+    let name = cname + "=";
+    let decodedCookie = decodeURIComponent(document.cookie);
+    let ca = decodedCookie.split(';');
+    for(let i = 0; i < ca.length; i++) {
+      let c = ca[i];
+      while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+      }
+      if (c.indexOf(name) == 0) {
+        return c.substring(name.length, c.length);
+      }
+    }
+    return "";
+}
 
 function deleteCookie(name) {
     document.cookie = name +'=; Path=/; Expires=Thu, 13 Dec 1989 00:00:01 GMT;';
 }
 
+
 $(function() {
   $('audio').audioPlayer();
 });
 
+function changeSong(audioFile){
+  document.getElementById("audio").setAttribute('src', audioFile);
+  audio.play(); //call this to play the song right away
+}
 
-function changeSong(file){
-  document.getElementById("audio").setAttribute('src', file);
-  //audio.play(); //call this to play the song right away
+function loadProfilePic(){
+  let username = getCookie("username");
+  let cookie_text = getCookie(username);
+  var user_cookie = JSON.parse(cookie_text);
+  var image = document.getElementById('profile'); 
+  if (user_cookie[5]!=""){
+    image.src=user_cookie[5];
+  }
 }
