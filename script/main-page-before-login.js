@@ -4,7 +4,6 @@ var countDownDate2 = new Date("Nov 11, 2022 06:00:00").getTime();
 // Update the count down every 1 second
 var x1 = setInterval(myCountdown, 1000, countDownDate1, "countdown1");
 var x2 = setInterval(myCountdown, 1000, countDownDate2, "countdown2");
-var x2 = setInterval(myCountdown, 1000, countDownDate3, "countdown3");
 
 function myCountdown(countDownDate, id){
     // Get today's date and time
@@ -46,7 +45,6 @@ function getCookie(cname) {
 }
 
 function checkUser() {
-    alert("no va");
     let cookie_text = getCookie("username");
     if (cookie_text != ""){
         window.location.href = "main-page-after-login.html";
