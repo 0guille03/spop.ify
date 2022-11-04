@@ -34,6 +34,11 @@
     padding-top: 2%;
     justify-content: left;
 }
+
+.grid-container-pad {
+    padding-bottom: 10%;
+}
+
 .grid2{  
     grid-template: 150px / auto;  
     width: 100%;
