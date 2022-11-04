@@ -107,6 +107,10 @@ function deleteCookie(name) {
 function validateForm() {
   let output = checkForm();
   if (output == ""){
+    let old_username = getCookie("username");
+    let cookie_text = getCookie(old_username);
+    var user_cookie = JSON.parse(cookie_text);
+
     // Get inputed values
     let username = document.getElementById("username").value;
     let name = document.getElementById("name").value;
@@ -115,10 +119,10 @@ function validateForm() {
     let dob = document.getElementById("dob").value;
     let pict = document.getElementById("pict").value;
     let password = document.getElementById("password").value;
-    var list = [password, name, surname, email, dob, pict];
+    //add code
+    var list = [password, name, surname, email, dob, pict, user_cookie[6]];
     
     // Delete old cookie and create new one
-    let old_username = getCookie("username");
     deleteCookie("username");
     deleteCookie(old_username);
     setCookie(username, JSON.stringify(list), 30);
