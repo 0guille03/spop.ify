@@ -57,7 +57,7 @@ var songs = {
     "g4u_i": "img/pop/sour.jpg",
     "g4u_a": "audio/pop/good-4-u.mp3",
     "sh_t": "Serial Heartbreaker",
-    "sh_s": "LaFLETCHERuv",
+    "sh_s": "FLETCHER",
     "sh_i": "img/pop/girl-of-my-dreams.jpg",
     "sh_a": "audio/pop/serial-heartbreaker.mp3"
 };
