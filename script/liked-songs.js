@@ -73,6 +73,4 @@ function LoadPlaylist(){
         let audio = songs[user_cookie[6][0][i]+"_a"];
         target.innerHTML += "<div class='grid-song'><div class='grid2'><div><img class='cover' src=" + songs[user_cookie[6][0][i]+"_i"] + " width='150' height='150' onclick=\"changeSong('" + audio + "')\"></div><div class='song-name'><div><b>" + songs[user_cookie[6][0][i]+"_t"] + "</b> <br>" + songs[user_cookie[6][0][i]+"_s"] + "</div></div></div></div>";
     }
-
-
 }
