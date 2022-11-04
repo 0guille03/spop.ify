@@ -99,3 +99,87 @@ audio{
     width: 150px;
     display:none;
 }
+
+@media only screen and (max-width: 1200px) {
+    /* Intermediate display between desktop and tablet */
+    .header2, .description {
+        grid-column: 1 / span 3;
+    }
+
+    .artist-picture{
+        grid-column: 1 / span 1;
+    }
+
+    .artist-name{
+        grid-column: 2 / span 2;
+        font-size: 30px;
+    }
+    
+    .grid-container {
+        grid-template-columns: 33% 33% 33%;
+        padding-right: 2%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    /* Display for tablet */
+    .header2, .description {
+        grid-column: 1 / span 2;
+    }
+
+    .artist-picture{
+        grid-column: 1 / span 1;
+    }
+
+    .artist-name{
+        grid-column: 2 / span 1;
+        font-size: 30px;
+    }
+    
+    .grid-container {
+        grid-template-columns: 50% 50%;
+        padding-right: 2%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    /* Display for mobile phones */
+    .header2, .description {
+        grid-column: 1 / span 2;
+    }
+
+    .artist-picture{
+        grid-column: 1 / span 1;
+    }
+
+    .artist-name{
+        grid-column: 2 / span 1;
+        font-size: 20px;
+    }
+    
+    .grid-container {
+        grid-template-columns: 50% 50%;
+        padding-right: 2%;
+    }
+}
+
+@media only screen and (max-width: 340px) {
+    /* Display for mobile phones */
+    .header2, .description {
+        grid-column: 1 / span 1;
+    }
+
+    .artist-picture{
+        grid-column: 1 / span 1;
+    }
+
+    .artist-name{
+        grid-column: 2 / span 1;
+        font-size: 20px;
+    }
+    
+    .grid-container {
+        grid-template-columns: 100%;
+        padding-right: 2%;
+    }
+}
