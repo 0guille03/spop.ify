@@ -14,6 +14,12 @@ function loadUserInfo(){
     genPlaylist(user_cookie[6]);
 }
 
+function gotoFollower(name, pict){
+  deleteCookie("follower");
+  setCookie("follower", JSON.stringify([name, pict]));
+  goTo("profile_follower.html")
+}
+
 function genPlaylist(playlists){
 
   for (let i = 0; i < playlists.length; i++) {
