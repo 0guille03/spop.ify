@@ -70,14 +70,11 @@
                     <div class="artist-name">
                         Playlist
                     </div> 
-                    <div class="grid-container" id="myPlaylist">
-
-                    </div>
-
+                    <div class="grid-container" id="myPlaylist"></div>
                     <div class="form-text">
-                        Name of the playlist: <input>
+                        Name of the playlist: <input id="name">
                         <br>
-                        Image for the playlist: <input>
+                        Image for the playlist: <input id="pict">
                         <br>
                         <button type="button" onclick="createPlaylist()">Submit</button>
                     </div>
@@ -87,7 +84,7 @@
                         <div class="grid-song">
                             <div class="grid2">
                                 <div id="Taylor Swift - Mr. Perfectly Fine">
-                                    <img class="cover" src="img/ts/fearless-tv.jpg" width="150" height="150" onclick='changeSong("audio/ts/mr-perfectly-fine.mp3")'>
+                                    <img class="cover" src="img/ts/fearless-tv.jpg" width="150" height="150" onclick='addToPlaylist("mpf")'>
                                 </div>
                                 <div class="song-name">
                                     <div>
@@ -101,7 +98,7 @@
                         <div class="grid-song">
                             <div class="grid2">
                                 <div>
-                                    <img class="cover" src="img/ts/red-tv.jpg" width="150" height="150" onclick='changeSong("audio/ts/all-too-well-tv.mp3")'>
+                                    <img class="cover" src="img/ts/red-tv.jpg" width="150" height="150" onclick='addToPlaylist("atw")'>
                                 </div>
                                 <div class="song-name">
                                     <div>
@@ -113,7 +110,7 @@
                         <div class="grid-song">
                             <div class="grid2">
                                 <div>
-                                    <img class="cover" src="img/ts/1989-tv.jpg" width="150" height="150" onclick='changeSong("audio/ts/this-love.mp3")'>
+                                    <img class="cover" src="img/ts/1989-tv.jpg" width="150" height="150" onclick='addToPlaylist("tl")'>
                                 </div>
                                 <div class="song-name">
                                     <div>
@@ -127,7 +124,7 @@
                         <div class="grid-song">
                             <div class="grid2">
                                 <div>
-                                    <img class="cover" src="img/ts/lover.jpg" width="150" height="150" onclick='changeSong("audio/ts/paper-rings.mp3")'>
+                                    <img class="cover" src="img/ts/lover.jpg" width="150" height="150" onclick='addToPlaylist("pr")'>
                                 </div>
                                 <div class="song-name">
                                     <div>
@@ -292,6 +289,7 @@
         </div>
         <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="script/main-page.js"></script>
+        <script src="script/create-playlist.js"></script>
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 		<script src="script/audioplayer.js"></script>
         

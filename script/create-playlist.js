@@ -61,22 +61,37 @@ var songs = {
     "sh_a": "audio/pop/serial-heartbreaker.mp3"
 };
 
+var playlist = []
+
 function LoadPlaylist(){
-    loadProfilePic()
-    let username = getCookie("username");
-    let cookie_text = getCookie(username);
-    var user_cookie = JSON.parse(cookie_text);
-    for (let i = 1; i < user_cookie[6][0].length; i++) {
-        var target = document.getElementById("playlist");
-        let audio = songs[user_cookie[6][0][i]+"_a"];
-        target.innerHTML += "<div class='grid-song'><div class='grid2'><div><img class='cover' src=" + songs[user_cookie[6][0][i]+"_i"] + " width='150' height='150' onclick=\"changeSong('" + audio + "')\"></div><div class='song-name'><div><b>" + songs[user_cookie[6][0][i]+"_t"] + "</b> <br>" + songs[user_cookie[6][0][i]+"_s"] + "</div></div></div></div>";
+    for (let i = 0; i < playlist.length; i++) {
+        var target = document.getElementById("myPlaylist");
+        let audio = songs[playlist[i]+"_a"];
+        target.innerHTML += "<div class='grid-song'><div class='grid2'><div><img class='cover' src=" + songs[playlist[i]+"_i"] + " width='150' height='150' onclick=\"changeSong('" + audio + "')\"></div><div class='song-name'><div><b>" + songs[playlist[i]+"_t"] + "</b> <br>" + songs[playlist[i]+"_s"] + "</div></div></div></div>";
     }
 }
 
 function addToPlaylist(song){
+    playlist.push(song);
+    var target = document.getElementById("myPlaylist");
+    target.innerHTML = "";
     LoadPlaylist();
 }
 
+function checkInput(){
+    let def_pic = "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/9398c530-d0a7-4c46-99b4-423a6aabf39f/d3kxnbe-f16dabfb-0cf1-436c-9315-915fbe462f23.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzkzOThjNTMwLWQwYTctNGM0Ni05OWI0LTQyM2E2YWFiZjM5ZlwvZDNreG5iZS1mMTZkYWJmYi0wY2YxLTQzNmMtOTMxNS05MTVmYmU0NjJmMjMucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.Gk0TAQTWUZBrHFjRC0y7pMEEdep95g7p6upVZNpXaZg"
+    let play_pict = document.getElementById("pict").value;
+    let play_name = document.getElementById("name").value;
+    if (play_pict == ""){
+        play_pict = def_pic;
+    }
+    let username = getCookie("username");
+    let cookie_text = getCookie(username);
+    var user_cookie = JSON.parse(cookie_text);
+    user_cookie[6].push([play_name, play_pict].concat(playlist));
+    deleteCookie(username);
+    setCookie(username, JSON.stringify(user_cookie), 30);
+}
 
 function createPlaylist(){
     
