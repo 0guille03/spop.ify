@@ -197,7 +197,7 @@ body, html {
     [class*="row-"] {
         height:fit-content;
     }
-    .header, .menu{
+    .footer, .header, .menu{
         position:static;
         bottom: 0;
     }
@@ -227,7 +227,7 @@ body, html {
     [class*="row-"] {
         height:fit-content;
     }
-    .header, .menu{
+    .footer, .header, .menu{
         position:static;
         bottom: 0;
     }
