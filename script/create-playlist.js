@@ -101,13 +101,13 @@ function createPlaylist(){
     }else{
         if (play_pict == ""){
             play_pict = def_pic;
-            let username = getCookie("username");
-            let cookie_text = getCookie(username);
-            var user_cookie = JSON.parse(cookie_text);
-            user_cookie[6].push([play_name, play_pict].concat(playlist));
-            deleteCookie(username);
-            setCookie(username, JSON.stringify(user_cookie), 30);
-            window.location.href = "main-page-after-login.html";
         }
+        let username = getCookie("username");
+        let cookie_text = getCookie(username);
+        var user_cookie = JSON.parse(cookie_text);
+        user_cookie[6].push([play_name, play_pict].concat(playlist));
+        deleteCookie(username);
+        setCookie(username, JSON.stringify(user_cookie), 30);
+        window.location.href = "main-page-after-login.html";
     }
 }
