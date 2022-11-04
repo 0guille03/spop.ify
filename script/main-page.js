@@ -290,3 +290,7 @@ function loadLikes(){
     $('#filled_'+ likes[user_cookie[6][0][i]]).css("display", "inline-flex");
   }
 }
+
+function goHome(){
+  window.location.href = "main-page-after-login.html";
+}
