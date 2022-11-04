@@ -111,6 +111,7 @@ function createPlaylist(){
             user_cookie[6].push([play_name, play_pict].concat(playlist));
             deleteCookie(username);
             setCookie(username, JSON.stringify(user_cookie), 30);
+            window.location.href = "main-page-after-login.html";
         }
     }
 }

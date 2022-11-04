@@ -135,6 +135,19 @@ function goTo(path){
   window.location.href = path;
 }
 
+function goToPlaylist(index){
+  deleteCookie("playlist");
+  let username = getCookie("username");
+  let cookie_text = getCookie(username);
+  var user_cookie = JSON.parse(cookie_text);
+  setCookie("playlist", JSON.stringify(user_cookie[6][index]));
+  goTo("playlist.html")
+}
+
+function goToLiked(){
+  goToPlaylist(0)
+}
+
 
 $(document).ready(function(){
   // Code to confirm logout

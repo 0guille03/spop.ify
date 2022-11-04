@@ -38,11 +38,11 @@
                                 <img src="img/menu/home.png" width="15" height="15">
                                 Home
                             </li>
-                            <li onclick='goTo("liked-songs.html")'>
+                            <li onclick='goToLiked()'>
                                 <img src="img/menu/heart.png" width="15" height="15">
                                 Favorite songs
                             </li>
-                            <li>
+                            <li onclick='goTo("create-playlist.html")'>
                                 <img src="img/menu/playlist.png" width="15" height="15">
                                 Create playlist
                             </li>
@@ -145,11 +145,11 @@
                         <div class="grid-song">
                             <div class="grid2">
                                 <div id="Taylor Swift - Mr. Perfectly Fine">
-                                    <img class="cover" src="img/ts/fearless-tv.jpg" width="150" height="150" onclick='changeSong("audio/ts/all-too-well-tv.mp3")'>
+                                    <img class="cover" src="img/ts/red-tv.jpg" width="150" height="150" onclick='changeSong("audio/ts/all-too-well-tv.mp3")'>
                                 </div>
                                 <div class="song-name">
                                     <div>
-                                        Mr. Perfectly Fine
+                                        All Too Well
                                     </div>
                                 </div>
                                 
@@ -158,7 +158,7 @@
                         <div class="grid-song">
                             <div class="grid2">
                                 <div>
-                                    <img class="cover" src="img/pop/all-4-nothing.jpg" width="150" height="150">
+                                    <img class="cover" src="img/pop/all-4-nothing.jpg" width="150" height="150" onclick='changeSong("audio/pop/stranger.mp3")'>
                                 </div>
                                 <div class="song-name">
                                     <div>
@@ -170,7 +170,7 @@
                         <div class="grid-song">
                             <div class="grid2">
                                 <div>
-                                    <img class="cover" src="img/ts/1989-tv.jpg" width="150" height="150">
+                                    <img class="cover" src="img/ts/midnights.jpg" width="150" height="150" onclick='changeSong("audio/ts/hits-different.mp3")'>
                                 </div>
                                 <div class="song-name">
                                     <div>
@@ -183,11 +183,11 @@
                         <div class="grid-song">
                             <div class="grid2">
                                 <div>
-                                    <img class="cover" src="img/ts/lover.jpg" width="150" height="150">
+                                    <img class="cover" src="img/sm/when-youre-gone.jpg" width="150" height="150" onclick='changeSong("audio/sm/when-youre-gone.mp3")'>
                                 </div>
                                 <div class="song-name">
                                     <div>
-                                        Paper Rings
+                                        When You're Gone
                                     </div>
                                 </div>
                             </div>
@@ -195,11 +195,11 @@
                         <div class="grid-song">
                             <div class="grid2">
                                 <div>
-                                    <img class="cover" src="img/ts/folklore.jpg" width="150" height="150">
+                                    <img class="cover" src="img/pop/sour.jpg" width="150" height="150" onclick='changeSong("audio/pop/good-4-u.mp3")'>
                                 </div>
                                 <div class="song-name">
                                     <div>
-                                        Exile
+                                        Good 4 u
                                     </div>
                                 </div>
                             </div>
@@ -209,30 +209,6 @@
                     <div class="grid-container" id="playlists">
                         <div class="header2">
                             Playlists
-                        </div>
-                        <div class="grid-song">
-                            <div class="grid2">
-                                <div>
-                                    <img class="cover" onclick='goTo("liked-songs.html")' src="https://i1.sndcdn.com/artworks-y6qitUuZoS6y8LQo-5s2pPA-t500x500.jpg" width="150" height="150">
-                                </div>
-                                <div class="song-name">
-                                    <div>
-                                        Liked Songs
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="grid-song">
-                            <div class="grid2">
-                                <div>
-                                    <img class="cover" src="data:image/png;base64,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" width="150" height="150">
-                                </div>
-                                <div class="song-name">
-                                    <div>
-                                        Other Playlists
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                     <div class="grid-container-pad grid-container">
