@@ -291,6 +291,6 @@ function loadLikes(){
   }
 }
 
-function goHome(){
-  window.location.href = "main-page-after-login.html";
+function goTo(path){
+  window.location.href = path;
 }
