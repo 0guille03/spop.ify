@@ -137,6 +137,14 @@ function goTo(path){
 
 
 $(document).ready(function(){
+  // Code to confirm logout
+  $('#logout').click(function(){
+    var reallyLogout=confirm("Do you really want to log out?");
+    if(reallyLogout){
+        deleteCookie("username");
+        window.location.href="main-page-before-login.html";
+    }
+});
   // Javascript code for the search engine
   $("#myInput").on("keyup", function() {
     var value = $(this).val().toLowerCase();
