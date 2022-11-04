@@ -99,7 +99,7 @@ function validateForm() {
             }
             else{
                 emails_list = JSON.parse(emails_list_text);
-                if (!emails_list.includes(email)){
+                if (emails_list.includes(email)){
                     document.getElementById("demo").innerHTML = "Email already exists";
                     return;
                 }
