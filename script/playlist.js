@@ -1,4 +1,4 @@
-
+// Dict to stract information of the image, audio name and artist of each song in playlist
 var songs = {
     "mpf_t": "Mr. Perfectly Fine",
     "mpf_s": "Taylor Swift",
@@ -62,7 +62,7 @@ var songs = {
     "sh_a": "audio/pop/serial-heartbreaker.mp3"
 };
 
-
+// Function to add the songs to the playlist part
 function LoadPlaylist(){
     loadProfilePic()
     let playlist_text = getCookie("playlist");

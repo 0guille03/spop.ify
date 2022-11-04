@@ -1,5 +1,5 @@
 
-
+// Function to load the values of the follower opened
 function loadUserInfo(){
     loadProfilePic()
     let follower_text = getCookie("follower");
