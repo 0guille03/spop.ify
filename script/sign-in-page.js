@@ -1,12 +1,4 @@
-function checkReg (string, re) {
-    // Get the value of the input field with id="numb"
-    var re = new RegExp(re);
-    if (re.test(string)) {
-        return true;
-    }
-    return false;
-}
-
+// Boolean value to determine if a URL is valid
 const isValidUrl = urlString=> {
     try { 
         return Boolean(new URL(urlString)); 
@@ -16,6 +8,17 @@ const isValidUrl = urlString=> {
     }
 }
 
+// Function to check if a string matches a regular expression
+function checkReg (string, re) {
+    // Get the value of the input field with id="numb"
+    var re = new RegExp(re);
+    if (re.test(string)) {
+        return true;
+    }
+    return false;
+}
+
+// Function to check that each element of the form meets a certain pattern
 function checkForm() {
       let output = "";
       // Check name 
@@ -70,31 +73,9 @@ function checkForm() {
         }
       }
       return output;
-  }    
+  }
 
-function setCookie(cname,cvalue,exdays) {
-    const d = new Date();
-    d.setTime(d.getTime() + (exdays*24*60*60*1000));
-    let expires = "expires=" + d.toUTCString();
-    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-}
-
-function getCookie(cname) {
-    let name = cname + "=";
-    let decodedCookie = decodeURIComponent(document.cookie);
-    let ca = decodedCookie.split(';');
-    for(let i = 0; i < ca.length; i++) {
-      let c = ca[i];
-      while (c.charAt(0) == ' ') {
-        c = c.substring(1);
-      }
-      if (c.indexOf(name) == 0) {
-        return c.substring(name.length, c.length);
-      }
-    }
-    return "";
-}
-
+// Function to validate the form inputted by the user
 function validateForm() {
     let output = checkForm();
     if (output == ""){
@@ -122,6 +103,7 @@ function validateForm() {
     document.getElementById("demo").innerHTML = output;
 }
 
+// Function to set default values to the form
 function defaultValues(){
     document.getElementById("name").value  = "";
     document.getElementById("surname").value  = "";
@@ -131,12 +113,4 @@ function defaultValues(){
     document.getElementById("username").value  = "";
     document.getElementById("password").value  = "";
     document.getElementById("checkbox").checked   = false;
-}
-  
-function checkUser() {
-    defaultValues()
-    let cookie_text = getCookie("username");
-    if (cookie_text != ""){
-        window.location.href = "main-page-after-login.html";
-    }
 }

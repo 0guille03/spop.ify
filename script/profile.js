@@ -1,4 +1,4 @@
-
+// Function to load the username and profile picture into the profile page
 function loadUserInfo(){
     let username = getCookie("username");
     let cookie_text = getCookie(username);
@@ -11,13 +11,4 @@ function loadUserInfo(){
       image.src=user_cookie[5];
       prof_image.src=user_cookie[5];
     }
-}
-
-
-function redirectArtist(){
-    window.location.href = "artist.html";
-}
-
-function redirectPlaylist(){
-  window.location.href = "liked-songs.html";
 }
