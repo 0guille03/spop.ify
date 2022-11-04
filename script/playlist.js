@@ -68,7 +68,7 @@ function LoadPlaylist(){
     let username = getCookie("username");
     let cookie_text = getCookie(username);
     var user_cookie = JSON.parse(cookie_text);
-    for (let i = 1; i < user_cookie[6][0].length; i++) {
+    for (let i = 2; i < user_cookie[6][0].length; i++) {
         var target = document.getElementById("playlist");
         let audio = songs[user_cookie[6][0][i]+"_a"];
         target.innerHTML += "<div class='grid-song'><div class='grid2'><div><img class='cover' src=" + songs[user_cookie[6][0][i]+"_i"] + " width='150' height='150' onclick=\"changeSong('" + audio + "')\"></div><div class='song-name'><div><b>" + songs[user_cookie[6][0][i]+"_t"] + "</b> <br>" + songs[user_cookie[6][0][i]+"_s"] + "</div></div></div></div>";
