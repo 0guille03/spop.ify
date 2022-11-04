@@ -17,3 +17,7 @@ function loadUserInfo(){
 function redirectArtist(){
     window.location.href = "artist.html";
 }
+
+function redirectPlaylist(){
+  window.location.href = "liked-songs.html";
+}

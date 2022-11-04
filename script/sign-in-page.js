@@ -106,7 +106,7 @@ function validateForm() {
         let dob = document.getElementById("dob").value;
         let pict = document.getElementById("pict").value;
         let password = document.getElementById("password").value;
-        var list = [password, name, surname, email, dob, pict];
+        var list = [password, name, surname, email, dob, pict, [["liked-songs"]]];
         
         let cookie_text = getCookie(username);
 
