@@ -92,6 +92,19 @@ function validateForm() {
         let cookie_text = getCookie(username);
 
         if (cookie_text == ""){
+            var emails_list = [getCookie("emails")];
+            deleteCookie("emails")
+            if (emails_list == [""]){
+                emails_list = [email];
+            }
+            else{
+                if (!emails_list.includes(email)){
+                    document.getElementById("demo").innerHTML = "Email already exists";
+                    return;
+                }
+                emails_list.push(email);
+            }
+            setCookie("emails", emails_list);
             setCookie(username, JSON.stringify(list), 30);
             setCookie("username", username, 30);
             window.location.href = "main-page-after-login.html";
