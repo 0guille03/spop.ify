@@ -1,4 +1,4 @@
-
+// Dict to stract information of the image, audio name and artist of each song in playlist
 var songs = {
     "mpf_t": "Mr. Perfectly Fine",
     "mpf_s": "Taylor Swift",
@@ -62,15 +62,19 @@ var songs = {
     "sh_a": "audio/pop/serial-heartbreaker.mp3"
 };
 
-
+// Function to add the songs to the playlist part
 function LoadPlaylist(){
     loadProfilePic()
-    let username = getCookie("username");
-    let cookie_text = getCookie(username);
-    var user_cookie = JSON.parse(cookie_text);
-    for (let i = 1; i < user_cookie[6][0].length; i++) {
+    let playlist_text = getCookie("playlist");
+    var playlist = JSON.parse(playlist_text);
+    var image = document.getElementById('pict'); 
+    image.src=playlist[1];
+    var name = document.getElementById('name'); 
+    name.innerHTML=playlist[0];
+
+    for (let i = 2; i < playlist.length; i++) {
         var target = document.getElementById("playlist");
-        let audio = songs[user_cookie[6][0][i]+"_a"];
-        target.innerHTML += "<div class='grid-song'><div class='grid2'><div><img class='cover' src=" + songs[user_cookie[6][0][i]+"_i"] + " width='150' height='150' onclick=\"changeSong('" + audio + "')\"></div><div class='song-name'><div><b>" + songs[user_cookie[6][0][i]+"_t"] + "</b> <br>" + songs[user_cookie[6][0][i]+"_s"] + "</div></div></div></div>";
+        let audio = songs[playlist[i]+"_a"];
+        target.innerHTML += "<div class='grid-song'><div class='grid2'><div><img class='cover' src=" + songs[playlist[i]+"_i"] + " width='150' height='150' onclick=\"changeSong('" + audio + "')\"></div><div class='song-name'><div><b>" + songs[playlist[i]+"_t"] + "</b> <br>" + songs[playlist[i]+"_s"] + "</div></div></div></div>";
     }
 }

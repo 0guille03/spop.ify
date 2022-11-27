@@ -87,24 +87,26 @@ function validateForm() {
         let dob = document.getElementById("dob").value;
         let pict = document.getElementById("pict").value;
         let password = document.getElementById("password").value;
-        var list = [password, name, surname, email, dob, pict, [["liked-songs", "https://i1.sndcdn.com/artworks-y6qitUuZoS6y8LQo-5s2pPA-t500x500.jpg"]]];
+        var list = [password, name, surname, email, dob, pict, [["Liked Songs", "https://i1.sndcdn.com/artworks-y6qitUuZoS6y8LQo-5s2pPA-t500x500.jpg"]]];
         
         let cookie_text = getCookie(username);
 
         if (cookie_text == ""){
-            var emails_list = [getCookie("emails")];
-            deleteCookie("emails")
-            if (emails_list == [""]){
+            let emails_list_text = getCookie("emails");
+            var emails_list = [];
+            if (emails_list_text == ""){
                 emails_list = [email];
             }
             else{
-                if (!emails_list.includes(email)){
+                emails_list = JSON.parse(emails_list_text);
+                if (emails_list.includes(email)){
                     document.getElementById("demo").innerHTML = "Email already exists";
                     return;
                 }
                 emails_list.push(email);
             }
-            setCookie("emails", emails_list);
+            deleteCookie("emails")
+            setCookie("emails", JSON.stringify(emails_list));
             setCookie(username, JSON.stringify(list), 30);
             setCookie("username", username, 30);
             window.location.href = "main-page-after-login.html";

@@ -1,3 +1,4 @@
+// Dict for keeping the favourites marked when loaded
 var likes = {
   "mpf": "like1",
   "atw": "like2",
@@ -133,6 +134,21 @@ function loadLikes(){
 // Function to redirect from one page to another
 function goTo(path){
   window.location.href = path;
+}
+
+// Function to be executed before a playlist is accessed, it creates the cookie with the song names
+function goToPlaylist(index){
+  deleteCookie("playlist");
+  let username = getCookie("username");
+  let cookie_text = getCookie(username);
+  var user_cookie = JSON.parse(cookie_text);
+  setCookie("playlist", JSON.stringify(user_cookie[6][index]));
+  goTo("playlist.html")
+}
+
+// Function to go to Likes songs playlist
+function goToLiked(){
+  goToPlaylist(0)
 }
 
 

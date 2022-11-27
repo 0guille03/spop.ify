@@ -14,12 +14,19 @@ function loadUserInfo(){
     genPlaylist(user_cookie[6]);
 }
 
+// Function before going to follower to create follower cookie
+function gotoFollower(name, pict){
+  deleteCookie("follower");
+  setCookie("follower", JSON.stringify([name, pict]));
+  goTo("profile_follower.html")
+}
+
+// Function to create the playlists list
 function genPlaylist(playlists){
 
   for (let i = 0; i < playlists.length; i++) {
       var target = document.getElementById("playlists");
-
-      target.innerHTML += "<div class='grid-song'><div class='grid2'><div><img class='cover' src=" + playlists[i][1] + " width='150' height='150' onclick=\"changeSong()\"></div><div class='song-name'><div><b>" + playlists[i][0] + "</b> <br></div></div></div></div>";
+      target.innerHTML += "<div class='grid-song'><div class='grid2'><div><img class='cover' src=" + playlists[i][1] + " width='150' height='150' onclick=\"goToPlaylist('" + i.toString() + "')\"></div><div class='song-name'><div><b>" + playlists[i][0] + "</b> <br></div></div></div></div>";
   }
 
 }
